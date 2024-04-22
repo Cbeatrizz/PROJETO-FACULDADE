@@ -1,17 +1,315 @@
-*{
+/*ESTILO GERAL*/
+* menu{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ .poppins-black-italic{
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 50px;
+ }
 }
+html{
+    scroll-behavior: smooth;
+}
+
 body{
-    background-color: aliceblue;
+    background-color: black;
     height: 100vh;
+}
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+
+}
+h2.titulo{
+color: #f5f4f4;
+font-size: 50px;
+text-align: center;
+}
+h2.titulo span{
+    color: rgb(253, 126, 41);
+}
+ button:hover, form .btn-enviar input:hover{
+    box-shadow: 0px 0px 8px rgb(255, 123, 0);
+    transform: scale(1.05);
+}
+/*ESTILO DO CABEÇALHO*/
+header{
+    padding: 40px 4%;
+}
+header >.interface{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
-.depoimentos{
-    width: 100%;
 
+header a{
+    color: #615e5e;
+text-decoration: none;
+display: inline-block;
+transition: .2s;
+font-size: 20px;
+}
+header a:hover{
+    color: #f38508;
+    transform: scale(1.05);
+}
+header nav ul{
+    list-style-type: none;
+}
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(233, 143, 8);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/*ESTILO DO TOPO DO SITE*/
+section.topo-do-site{
+    padding: 40px 4%;
+}
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+    .topo-do-site h1{
+        color: #dbd8d8;
+        font-size: 25px;
+        line-height: 40px;
+    }
+.topo-do-site .txt-topo-site p{
+    font-size: 20px;
+    color: #e7dede;
+    margin: 40px 0;
+}
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+@keyframes flutuar{
+        0%{
+            top: 0;
+
+        }
+100%{
+    top: 30px;
+}
+}
+/*ESTILOS DOS PROJETOS*/
+section.projetos{
+    padding: 40px 4%;
+background-color: #06756ed0;
+}
+section.projetos .projetos-box .flex{
+    gap: 60px;
+}
+.projetos .projetos-box{
+    font-size: 20px;
+    color: #0c0c0c;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 40px;
+    transition: .2s;
+}
+.projetos .projetos-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #f39201;
+}
+.projetos .projetos-box i{
+    font-size: 48px;
+    color: rgb(248, 131, 22);
+}
+.projetos .projetos-box h3{
+    font-size: 26px;
+    margin: 15px 0;
+}
+/*ESTILO SOBRE*/
+section.sobre{
+    font-size: 20px;
+    padding: 80px 4%;
+background-color: #586e74;
+}
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+.sobre .txt-sobre{
+    color: #fff;
+
+}
+.sobre .txt-sobre h2{
+    font-size: 30px;
+color: #080808;
+margin-bottom: 30px;
+}
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+}
+.btn-social button{
+    width: 50px;
+    height: 50px;
+   border-radius: 50%;
+   border: none;
+   background-color: rgb(233, 155, 9);
+   font-size: 22px;
+   cursor: pointer;
+   transition: .2s;
+}
+/*ESTILO PORTFÓLIO*/
+section.portfolio{
+    background-color: rgb(58, 46, 59);
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff85;
+}
+.img-port{
+    width: 360px;
+    height: 460px;
+   background-size: cover;
+   background-position: 100% 0%;
+   transition: .8s;
+   cursor: pointer;
+   border-radius: 40px;
+   position: relative;
+}
+section.portfolio .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+   
+    .img-port:hover{
+        background-position: 100% 100%;
+    }
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #3f3e3e8d;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 600;
+            color: #fff;
+            opacity: 0;
+            transition: .5s;
+        }
+        .overlay:hover{
+            opacity: 1;
+        }
+/*ESTILO DE FORMULÁRIO DE CONTATO*/
+section.formulario{
+    background-color: cadetblue;
+    padding: 80px 4%;
+}
+form{
+    
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+form input, form textarea{
+    width: 100%;
+    background-color: #222222;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 15px;
+}
+form textarea{
+    resize: none;
+}
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+form .btn-enviar input{
+    width: 120px;
+    background-color: orange;
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+transition: .2s;
+}
+/*ESTILO RODAPÉ*/
+footer{
+    padding: 60px 4%;
+    box-shadow: 0 0 30px 10px #ffffff85;
+
+}
+footer .flex{
+    justify-content: space-between;
+
+}
+footer .line-footer{
+    padding: 20px 0;
+    
+}
+.borda{
+    border-top: 2px solid orange;
+}
+footer .line-footer p {
+    color: #fff;
+    font-size: 18px;
+}
+footer .line-footer p a{
+    color: #fff;
+}
+@media screen and (max-widht: 1020px){
+    /*CLASSES GERAIS*/
+    .flex{
+        flex-direction: column;
+    }
+    h2.titulo{
+        color: #f3e1e1f3;
+        font-size: 30px;
+        text-align: center;
+        line-height: 30px;
+        }
+    */CABEÇALHO*/
+.menu-desktop, .btn-contato{
+    display: none;
+
+}
+section.topo-do-site .flex{
+    gap: 40px;
+}
+section.topo-do-site{
+    padding: 20px 8%;
+}
+.topo-do-site h1 {
+    font-size: 25px;
+    line-height: 30px;
+
+}
+.topo-do-site .img-topo-site img{
+    width: 100%;
+}
+/*ESTILOS DOS PROJETOS*/
+section.projetos{
+    padding: 40px 8%;
+background-color: #92f5edd0;
+}
 }
